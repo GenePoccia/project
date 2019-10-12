@@ -1,1 +1,1 @@
-Small project for a tattoo website
+##Small project for a tattoo website
