@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import Routes from './routes/Routes.jsx'
+import Navbar from '../navbar/Navbar.jsx'
 
 class UnconnectedApp extends Component {
   render = () => {
     return (
       <div>
-          <Routes />
+          <Navbar />
+          hello this is the homepage
       </div>
     );
   };
