@@ -1,0 +1,27 @@
+.img {
+    height: 100px;
+    padding-top: 1%;
+}
+
+.navbar {
+    display: flex;
+    border-bottom: 0.5px solid black;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding-bottom: 3%;
+}
+
+.nav-button {
+    margin-top: 25%;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    justify-content: right;
+}
+
+.nav-text {
+    display: flex;
+    right: 0;
+    margin-right: 10%;
+    position: absolute;
+}
