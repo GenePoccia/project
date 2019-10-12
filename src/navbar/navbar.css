@@ -8,16 +8,16 @@
     border-bottom: 0.5px solid black;
     margin-left: 4%;
     margin-right: 4%;
-    padding-bottom: 3%;
 }
 
 .nav-button {
-    margin-top: 25%;
-    width: 120px;
+    margin-top: 14%;
+    width: 150px;
     height: 50px;
     text-align: center;
     justify-content: right;
 }
+
 
 .nav-text {
     display: flex;
@@ -25,3 +25,4 @@
     margin-right: 10%;
     position: absolute;
 }
+
