@@ -6,6 +6,7 @@ import Homepage from '../pages/Homepage.jsx'
 import About from '../pages/About.jsx'
 import Contact from '../pages/Contact.jsx'
 import Care from '../pages/Care.jsx'
+import Artwork from '../pages/Artwork.jsx'
 
 class UnconnectedRoutes extends Component {
     renderRoot = () => {
@@ -24,6 +25,10 @@ class UnconnectedRoutes extends Component {
         return <Care />
     }
 
+    renderArtwork = () => {
+      return <Artwork />
+    }
+
   render = () => {
     return (
       <div>
@@ -31,6 +36,7 @@ class UnconnectedRoutes extends Component {
           <Route exact={true} path="/about" render={this.renderAbout}/>
           <Route exact={true} path="/contact" render={this.renderContact}/>
           <Route exact={true} path="/care" render={this.renderCare}/>
+          <Route exact={true} path="/artwork" render={this.renderArtwork}/>
       </div>
     );
   };

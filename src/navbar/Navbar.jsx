@@ -13,6 +13,7 @@ class UnconnectedNavbar extends Component {
           <div class='nav-text'>
           <div class='nav-button'><Link to='/'> Home </Link>  </div>
           <div class='nav-button'><Link to='/about'>About</Link></div>
+          <div class='nav-button'><Link to='/artwork'>Artwork</Link></div>
           <div class='nav-button'><Link to='/contact'>Contact</Link></div>
           <div class='nav-button'><Link to='/care'>Tattoo Care</Link></div>
        </div>

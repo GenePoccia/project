@@ -4,14 +4,15 @@
 }
 
 .navbar {
-    display: flex;
-    border-bottom: 0.5px solid black;
+    display: flex block;
+    border-bottom: 0.5px solid #eee;
     margin-left: 4%;
     margin-right: 4%;
+    min-width: 1070px;
 }
 
 .nav-button {
-    margin-top: 14%;
+    margin-top: 8%;
     width: 150px;
     height: 50px;
     text-align: center;
@@ -23,6 +24,6 @@
     display: flex;
     right: 0;
     margin-right: 10%;
-    position: absolute;
+    position: fixed;
 }
 

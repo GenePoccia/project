@@ -7,6 +7,7 @@ a {
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: black;
 }
 
 a:hover {
@@ -14,5 +15,5 @@ a:hover {
     padding: 5%;
     border-width: 1px;
     border-radius: 10%;
-    border-color: grey;
+    border-color: #eee;
   }
