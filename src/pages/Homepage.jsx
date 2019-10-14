@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Navbar from '../navbar/Navbar.jsx'
+import Dropdown from '../Dropdown.jsx'
 
 class UnconnectedApp extends Component {
   render = () => {
@@ -9,6 +10,7 @@ class UnconnectedApp extends Component {
       <div>
           <Navbar />
           hello this is the homepage
+          <Dropdown />
       </div>
     );
   };
