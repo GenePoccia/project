@@ -1,15 +1,13 @@
- .dropdown {
-     position: relative;
-     display: inline-block;
-}
+
  ul {
      list-style-type: none;
      margin: 0;
+     margin-top: 15%;
      padding: 0;
      top:45px;
      right:0px;
      width: 200px;
-     background-color: white;
+     background-color: whitesmoke;
      font-weight:bold;
      position: absolute;
 
@@ -32,13 +30,16 @@
      color: white;
 }
  .button{
-     width:178px;
-     height:18px;
-     background-color:#ff3232 ;
-     padding:12px;
+     width:30px;
+     background: white;
+     height:20px;
+     padding:15px;
+     margin-top: 10%;
      border-radius:5px;
      font-weight:bold;
-     color:white;
+     color: black;
+     border: black;
+     border-style: solid; 
 }
  .button:before{
      position:absolute;
@@ -48,4 +49,8 @@
      border-color: white transparent transparent transparent;
      right:6px;
      top:18px;
+}
+
+.dropdown-img {
+    width: 100%;
 }

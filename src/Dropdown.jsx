@@ -8,11 +8,9 @@ import './css/dropdown.css'
 class UnconnectedDropdown extends Component {
     constructor() {
         super();
-
         this.state = {
             displayMenu: false
         }
-
         this.showDropdownMenu = this.showDropdownMenu.bind(this);
         this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
     }
@@ -29,10 +27,11 @@ class UnconnectedDropdown extends Component {
             document.removeEventListener('click', this.hideDropdownMenu)
         })
     }
+
   render = () => {
     return (
-        <div  className="dropdown" style = {{background:"red",width:"200px"}} >
-            <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
+        <div  className="dropdown">
+            <div className="button" onClick={this.showDropdownMenu}> <img class="dropdown-img" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-256.png" /> </div>
         { this.state.displayMenu ? (
             <ul>
            <li><Link to='/'> Home </Link> </li>
@@ -46,13 +45,6 @@ class UnconnectedDropdown extends Component {
             null
           )
           }</div>
-    //       <div class='nav-text'>
-    //       <div class='nav-button'><Link to='/'> Home </Link>  </div>
-    //       <div class='nav-button'><Link to='/about'>About</Link></div>
-    //       <div class='nav-button'><Link to='/artwork'>Artwork</Link></div>
-    //       <div class='nav-button'><Link to='/contact'>Contact</Link></div>
-    //       <div class='nav-button'><Link to='/care'>Tattoo Care</Link></div>
-    //       </div>
      );
   };
 }

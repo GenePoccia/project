@@ -10,7 +10,6 @@ class UnconnectedApp extends Component {
       <div>
           <Navbar />
           hello this is the homepage
-          <Dropdown />
       </div>
     );
   };
