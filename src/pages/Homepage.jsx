@@ -7,7 +7,6 @@ class UnconnectedApp extends Component {
   render = () => {
     return (
       <div>
-          hello this is the homepage
           <PortfolioSelection />
       </div>
     );

@@ -1,0 +1,19 @@
+.banner{
+    border-bottom: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 10px
+}
+
+.flex{
+    display: flex;
+}
+
+.bannerLeft {
+    margin-left: 6%;
+    float: left;
+}
+
+.bannerRight {
+    margin-left: 70%;
+}
+
