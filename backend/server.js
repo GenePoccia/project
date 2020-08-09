@@ -16,6 +16,7 @@ app.get("/", upload.none(), (req,res) => {
 })
 
 app.get("/getPortfolio", upload.none(), async (req, res) => {
+    //add user as paramater for DB search
     let params = {
         req: req,
         res: res
@@ -23,7 +24,6 @@ app.get("/getPortfolio", upload.none(), async (req, res) => {
     //grab portfolio from DB
     //this is a placeholder portfolio
     await portfolio.getPortfolio(params)
-    // res.send({success: true, body: userPortfolio})
 })
 
 app.post("/insertTicker", upload.none(), (req,res) => {

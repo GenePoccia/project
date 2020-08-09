@@ -9,6 +9,7 @@ MongoClient.connect(url, (err, allDbs) => {
 });
 
 const getPortfolio = async (params) => {
+    //to-do: change user specific portfolio
     let db = dbs.db("Portfolio")
     await db.collection("Users").find({}).toArray((err,results) => {
         params.res.send({success: true, body: results})
