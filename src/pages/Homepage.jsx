@@ -4,6 +4,14 @@ import { connect } from "react-redux";
 import PortfolioSelection from '../forms/portfolioSelection.jsx'
 
 class UnconnectedApp extends Component {
+  componentDidMount() {
+    fetch('http://localhost:4000/getPortfolio')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data.body);
+    })
+
+  }
   render = () => {
     return (
       <div>
