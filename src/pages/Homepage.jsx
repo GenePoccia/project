@@ -8,7 +8,7 @@ class UnconnectedApp extends Component {
     fetch('http://localhost:4000/getPortfolio')
     .then(res => res.json())
     .then(data => {
-      console.log(data.body);
+      console.log(data);
     })
 
   }
