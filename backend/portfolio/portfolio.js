@@ -1,7 +1,9 @@
+let mongoUrl = require('../mongoUrl.json')
+
 let Mongo = require("mongodb");
 let MongoClient = Mongo.MongoClient;
 let ObjectId = Mongo.ObjectId;
-let url = "mongodb+srv://eugenio:panama13@cluster0.af3ut.mongodb.net/portfolio?retryWrites=true&w=majority";
+let url = mongoUrl.url;
 let dbs = undefined;
 MongoClient.connect(url, (err, allDbs) => {
   console.log(err);
