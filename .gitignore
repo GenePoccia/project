@@ -2,7 +2,7 @@
 
 #sensitive
 mongoKey.txt
-./backend/
+/backend
 
 
 # dependencies
