@@ -21,25 +21,26 @@ class UnconnectedLogin extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-    let data = new FormData();
-    data.append("username", this.state.username);
-    data.append("password", this.state.password);
-    fetch("http://localhost:4000/login", {
-      method: "POST",
-      body: data,
-      credentials: "include",
-    })
-      .then((x) => {
-        return x.text();
-      })
-      .then((responseBody) => {
-        let body = JSON.parse(responseBody);
-        if (!body.success) {
-          alert("login failed");
-          return;
-        }
-        this.props.dispatch({ type: "login-success" });
-      });
+    
+    // let data = new FormData();
+    // data.append("username", this.state.username);
+    // data.append("password", this.state.password);
+    // fetch("http://localhost:4000/login", {
+    //   method: "POST",
+    //   body: data,
+    //   credentials: "include",
+    // })
+    //   .then((x) => {
+    //     return x.text();
+    //   })
+    //   .then((responseBody) => {
+    //     let body = JSON.parse(responseBody);
+    //     if (!body.success) {
+    //       alert("login failed");
+    //       return;
+    //     }
+    //     this.props.dispatch({ type: "login-success" });
+    //   });
   };
 
   render = () => {

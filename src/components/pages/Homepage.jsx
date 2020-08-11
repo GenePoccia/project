@@ -16,8 +16,8 @@ class UnconnectedApp extends Component {
   render = () => {
     return (
       <div>
-          {/* <PortfolioSelection /> */}
-          <Login/>
+          <PortfolioSelection />
+          {/* <Login/> */}
       </div>
     );
   };

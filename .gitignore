@@ -2,7 +2,8 @@
 
 #sensitive
 mongoKey.txt
-/backend
+/backend/mongoConnection.js
+/backend/mongoUrl.json
 
 
 # dependencies
