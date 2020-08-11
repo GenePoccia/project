@@ -1,18 +1,15 @@
 let mongoUrl = require('../mongoUrl.json')
 
-let Mongo = require("mongodb");
-let MongoClient = Mongo.MongoClient;
-let ObjectId = Mongo.ObjectId;
-let url = mongoUrl.url;
-let dbs = undefined;
-MongoClient.connect(url, (err, allDbs) => {
-  console.log(err);
-  dbs = allDbs;
+const MongoClient = require('mongodb').MongoClient
+const assert = require('assert')
+const url = mongoUrl.url
+let db;
+MongoClient.connect(url, function(err, client) {
+    assert.equal(null, err);
+    db = client.db("Portfolio")
 });
 
 const getPortfolio = async (params) => {
-    //to-do: change user specific portfolio
-    let db = dbs.db("Portfolio")
     await db.collection("Users").find({}).toArray((err,results) => {
         params.res.send({success: true, body: results})
     })
