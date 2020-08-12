@@ -5,19 +5,11 @@ import PortfolioSelection from '../forms/portfolioSelection.jsx'
 import Login from '../forms/login'
 
 class UnconnectedApp extends Component {
-  componentDidMount() {
-    fetch('http://localhost:4000/getPortfolio')
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-    })
-
-  }
   render = () => {
     return (
       <div>
-          <PortfolioSelection />
-          {/* <Login/> */}
+        {/* <PortfolioSelection /> */}
+        {/* <Login/> */}
       </div>
     );
   };
