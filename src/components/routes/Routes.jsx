@@ -15,7 +15,7 @@ class UnconnectedRoutes extends Component {
       return <MyAccount />
     }
 
-    renderLoginSignup = () => {
+    renderSignup = () => {
       return <Signup />
     }
 
