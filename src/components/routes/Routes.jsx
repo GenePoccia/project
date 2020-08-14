@@ -7,7 +7,6 @@ import MyAccount from '../pages/myAccount.jsx'
 
 class UnconnectedRoutes extends Component {
     renderRoot = () => {
-      
         return <Homepage />
     }
 
