@@ -7,12 +7,11 @@ import Signup from '../forms/signup'
 
 
 class UnconnectedBanner extends Component {
-
   render = () => {
     return (
-      <div className="banner flex" >
-            <div className="bannerLeft"><Link to="/">Home</Link></div>
-            <div className="bannerRight"><Link to="/account">Account</Link></div>
+      <div className="banner flex">
+        <div className="bannerLeft">Hello</div>
+        <div className="bannerRight">Sign up | Login</div>
       </div>
     );
   };

@@ -3,16 +3,17 @@ import { connect } from "react-redux";
 import { withRouter, Route, Link } from "react-router-dom";
 import './bannerCss.css';
 
-import Login from '../forms/login'
-
 
 class UnconnectedBannerLoggedIn extends Component {
-
   render = () => {
     return (
-      <div className="banner flex" >
-            <div className="bannerLeft">Hello</div>
-            <div className="bannerRight">Sign up</div>
+      <div className="banner flex">
+        <div className="bannerLeft">
+          <Link to="/">Home</Link>
+        </div>
+        <div className="bannerRight">
+          <Link to="/account">Account</Link>
+        </div>
       </div>
     );
   };
