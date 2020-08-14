@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { withRouter, Route, Link } from "react-router-dom";
 import './bannerCss.css';
 
-import Signup from '../forms/signup'
+import Login from '../forms/login'
 
 
-class UnconnectedBanner extends Component {
+class UnconnectedBannerLoggedIn extends Component {
 
   render = () => {
     return (
@@ -18,6 +18,6 @@ class UnconnectedBanner extends Component {
   };
 }
 
-let Banner = connect()(UnconnectedBanner);
+let BannerLoggedIn = connect()(UnconnectedBannerLoggedIn);
 
-export default Banner;
+export default BannerLoggedIn;
