@@ -4,7 +4,7 @@ import { withRouter, Route, Link } from "react-router-dom";
 
 import Homepage from '../pages/Homepage.jsx'
 import MyAccount from '../pages/myAccount.jsx'
-import Signup from '../forms/signup.jsx'
+import LoginSignup from '../pages/loginSignup.jsx'
 
 class UnconnectedRoutes extends Component {
     renderRoot = () => {
@@ -16,7 +16,7 @@ class UnconnectedRoutes extends Component {
     }
 
     renderSignup = () => {
-      return <Signup />
+      return <div><LoginSignup/></div>
     }
 
 
