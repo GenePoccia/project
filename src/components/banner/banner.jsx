@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { withRouter, Route, Link } from "react-router-dom";
 import './bannerCss.css';
 
+import Signup from '../forms/signup'
+
 
 class UnconnectedBanner extends Component {
 
