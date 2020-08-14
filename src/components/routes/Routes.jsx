@@ -4,6 +4,7 @@ import { withRouter, Route, Link } from "react-router-dom";
 
 import Homepage from '../pages/Homepage.jsx'
 import MyAccount from '../pages/myAccount.jsx'
+import Signup from '../forms/signup.jsx'
 
 class UnconnectedRoutes extends Component {
     renderRoot = () => {
@@ -14,6 +15,10 @@ class UnconnectedRoutes extends Component {
       return <MyAccount />
     }
 
+    renderLoginSignup = () => {
+      return <Signup />
+    }
+
 
   render = () => {
     console.log('routes')
@@ -21,6 +26,7 @@ class UnconnectedRoutes extends Component {
       <div>
           <Route exact={true} path="/" render={this.renderRoot} />
           <Route exact={true} path="/account" render={this.renderAccount} />
+          <Route exact={true} path="/signup" render={this.renderSignup} />
       </div>
     );
   };
