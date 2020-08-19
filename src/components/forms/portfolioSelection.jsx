@@ -33,7 +33,22 @@ const UnconnectedPortoflioSelection = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("inputFields ", inputFields )
+    //placeholder user
+    let userId = 'testUser'
+    //
+    let data = new FormData();
+    console.log(inputFields)
+    data.append("portfolio", inputFields);
+    data.append("user", userId )
+    fetch("http://localhost:4000/push-portfolio", {
+      method: "POST",
+      body: data,
+      credentials: "include"
+    })
+    .then(response => response.text())
+    .then(responseBody => {
+      console.log(JSON.parse(responseBody))
+    })
   }
 
   return (

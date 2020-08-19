@@ -12,6 +12,8 @@ let reducer = (state, action) => {
 const store = createStore(
   reducer,
   {
+    userId: null,
+    loggedIn: false,
     portfolio: []
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

@@ -4,8 +4,9 @@ const getPortfolio = async (params) => {
     await db.getPortfolioFromDb(params)
 }
 
-const addToPortfolio = () => {
-
+const addPortfolio = async (params) => {
+    // console.log(params)
+    await db.pushPortfolio(params)
 }
 
 const deleteFromPortfolio = () => {
@@ -13,5 +14,6 @@ const deleteFromPortfolio = () => {
 }
 
 module.exports = {
-    getPortfolio
+    getPortfolio,
+    addPortfolio
 }

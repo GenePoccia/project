@@ -15,6 +15,13 @@ const getPortfolioFromDb = async(params) => {
     })
 }
 
+const pushPortfolio = async(params) => {
+    console.log(params.req.body)
+    return 'hello'
+    // await portfolioDb.collection
+}
+
 module.exports = {
-    getPortfolioFromDb
+    getPortfolioFromDb,
+    pushPortfolio
 }
