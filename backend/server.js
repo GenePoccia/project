@@ -2,11 +2,11 @@
 let express = require("express");
 let app = express();
 let cors = require("cors");
-let cookieParser = require("cookie-parser");
-let bodyParser = require("body-parser");
 let multer = require("multer");
 let upload = multer();
-app.use(bodyParser.urlencoded({ extended: true }));
+let cookieParser = require("cookie-parser");
+let bodyParser = require("body-parser");
+app.use(bodyParser());
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 //src
