@@ -11,6 +11,7 @@ app.use(cookieParser());
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 //src
 let portfolio = require('./portfolio/portfolio.js')
+let users = require('./portfolio/users.js')
 
 //endpoints
 app.get("/", (req,res) => {
@@ -30,8 +31,13 @@ app.post("/insertTicker", (req,res) => {
 
 })
 
-app.post("/signup", upload.none(), (req, res) => {
-  console.log(req.body)
+app.post("/signup", upload.none(), async (req, res) => {
+  let params = {
+    req: req,
+    res: res,
+    collection: "Users"
+  }
+  await users.signup(params)
 })
 
 

@@ -15,6 +15,11 @@ const getPortfolioFromDb = async(params) => {
     })
 }
 
+const postSignupInfoToDb = async(params) => {
+    //code to put a user in mongoDB
+}
+
 module.exports = {
-    getPortfolioFromDb
+    getPortfolioFromDb,
+    postSignupInfoToDb
 }
