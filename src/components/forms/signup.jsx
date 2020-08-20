@@ -19,13 +19,18 @@ class UnconnectedSignup extends Component {
   handlePasswordChange = (event) => {
     this.setState({ password: event.target.value });
   };
-  handleUsernameChange = (event) => {
-    this.setState({ password: event.target.value });
+  handleEmailChange = (event) => {
+    this.setState({ email: event.target.value });
   };
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-    
+    let data = new FormData();
+    console.log(this.state.username)
+    data.append("username", this.state.username);
+    data.append("password", this.state.password);
+    data.append("email", this.state.email)
+    fetch("http://localhost:4000/signup", { method: "POST", body: data });
   };
 
   render = () => {

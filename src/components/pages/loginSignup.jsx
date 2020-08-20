@@ -9,7 +9,9 @@ class UnconnectedLoginSignup extends Component {
   render = () => {
     return (
       <div>
+        <h2>Log in</h2>
         <Login />
+        <h2>Sign up</h2>
         <Signup />
       </div>
     );

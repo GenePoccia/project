@@ -1,6 +1,8 @@
 //modules
 let express = require("express");
 let app = express();
+let multer = require("multer");
+let upload = multer();
 let cors = require("cors");
 let cookieParser = require("cookie-parser");
 let bodyParser = require("body-parser");
@@ -26,6 +28,10 @@ app.get("/getPortfolio", async (req, res) => {
 
 app.post("/insertTicker", (req,res) => {
 
+})
+
+app.post("/signup", upload.none(), (req, res) => {
+  console.log(req.body)
 })
 
 
