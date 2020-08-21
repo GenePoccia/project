@@ -33,7 +33,6 @@ const UnconnectedPortoflioSelection = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("inputFields ", inputFields )
   }
 
   return (

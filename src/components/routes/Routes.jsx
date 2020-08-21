@@ -21,7 +21,6 @@ class UnconnectedRoutes extends Component {
 
 
   render = () => {
-    console.log('routes')
     return (
       <div>
           <Route exact={true} path="/" render={this.renderRoot} />

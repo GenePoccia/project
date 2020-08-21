@@ -26,7 +26,6 @@ class UnconnectedSignup extends Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     let data = new FormData();
-    console.log(this.state.username)
     data.append("username", this.state.username);
     data.append("password", this.state.password);
     data.append("email", this.state.email)
