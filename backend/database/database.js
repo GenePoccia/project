@@ -15,8 +15,16 @@ const getPortfolioFromDb = async(params) => {
     })
 }
 
-const postSignupInfoToDb = async(params) => {
-    //code to put a user in mongoDB
+const postSignupInfoToDb = async (params) => {
+    await portfolioDb.collection(params.collection)
+    .findOne({user: params.req.body.username}, (err, results) => {
+        console.log(results)
+        if(results === null) { 
+            return false
+        } else {
+            return true
+        }
+    })
 }
 
 module.exports = {
