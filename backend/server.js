@@ -28,7 +28,7 @@ app.get("/getPortfolio", async (req, res) => {
     await portfolio.getPortfolio(params)
 })
 
-app.post("/insertTicker", (req,res) => {
+app.post("/insertTicker", upload.none(), (req,res) => {
 
 })
 
