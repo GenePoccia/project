@@ -30,7 +30,17 @@ class UnconnectedSignup extends Component {
     data.append("username", this.state.username);
     data.append("password", this.state.password);
     data.append("email", this.state.email)
-    fetch("http://localhost:4000/signup", { method: "POST", body: data });
+    fetch("http://localhost:4000/signup", { method: "POST", body: data })
+    .then(x => {
+      return x.text()
+    }).then(response => {
+      let success = JSON.parse(response).success
+      if(success) {
+        window.alert("signup successful")
+      } else {
+        window.alert("That username is already taken")
+      }
+    });
   };
 
   render = () => {

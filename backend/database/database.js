@@ -1,7 +1,7 @@
 let mongoUrl = require('../mongoUrl.json')
 
 const MongoClient = require('mongodb').MongoClient
-const assert = require('assert')
+const assert = require('assert');
 const url = mongoUrl.url
 let portfolioDb;
 MongoClient.connect(url, function(err, client) {
@@ -18,13 +18,21 @@ const getPortfolioFromDb = async(params) => {
 const postSignupInfoToDb = async (params) => {
     await portfolioDb.collection(params.collection)
     .findOne({user: params.req.body.username}, (err, results) => {
-        console.log(results)
-        if(results === null) { 
-            return false
+        if(results === null) {
+            putUserInDb(params) 
         } else {
-            return true
+            params.res.send({success: false})
         }
     })
+}
+
+const putUserInDb = async (params) => {
+    await portfolioDb.collection(params.collection)
+    .insert({
+        user: params.req.body.username,
+        portfolio: []
+    })
+    params.res.send({success: true})
 }
 
 module.exports = {
