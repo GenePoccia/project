@@ -12,6 +12,7 @@ app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 //src
 let portfolio = require('./portfolio/portfolio.js')
 let users = require('./portfolio/users.js')
+let tools = require('./tools/tools')
 //constants
 const USER_COLLECTION = "Users"
 //endpoints
@@ -36,7 +37,8 @@ app.post("/signup", upload.none(), async (req, res) => {
   let params = {
     req: req,
     res: res,
-    collection: USER_COLLECTION
+    collection: USER_COLLECTION,
+    cookie: tools.generateId()
   }
   await users.signup(params)
 })

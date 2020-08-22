@@ -35,9 +35,10 @@ class UnconnectedSignup extends Component {
     }).then(response => {
       let success = JSON.parse(response).success
       if(success) {
-        window.alert("signup successful")
+        alert("signup successful")
+        this.props.dispatch({type: "login-success"})
       } else {
-        window.alert("That username is already taken")
+        alert("That username is already taken")
       }
     });
   };
