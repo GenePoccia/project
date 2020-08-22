@@ -1,5 +1,5 @@
 const generateId = () => {
-  return "" + Math.floor(Math.random() * 10000000);
+  return "" + Math.floor(Math.random() * 100000000000);
 };
 
 module.exports = {

@@ -27,11 +27,19 @@ const postSignupInfoToDb = async (params) => {
 }
 
 const putUserInDb = async (params) => {
+    console.log(`
+    user: ${params.req.body.username},
+    sessionId: ${params.cookie},
+    email: ${params.req.body.email},
+    `)
     await portfolioDb.collection(params.collection)
     .insert({
         user: params.req.body.username,
+        sessionId: params.req.body.cookie,
+        email: params.req.body.email,
         portfolio: []
     })
+    params.res.cookie("sid", params.cookie)
     params.res.send({success: true})
 }
 
