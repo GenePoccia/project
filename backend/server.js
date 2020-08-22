@@ -32,6 +32,15 @@ app.get("/getPortfolio", async (req, res) => {
 app.post("/insertTicker", upload.none(), (req,res) => {
 
 })
+app.post("/login", upload.none(), async (req, res) => {
+  let params = {
+    req: req,
+    res: res,
+    collection: USER_COLLECTION,
+    cookie: tools.generateId()
+  }
+  await users.login(params)
+})
 
 app.post("/signup", upload.none(), async (req, res) => {
   let params = {

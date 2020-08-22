@@ -2,6 +2,7 @@ let mongoUrl = require('../mongoUrl.json')
 
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert');
+const portfolio = require('../portfolio/portfolio');
 const url = mongoUrl.url
 let portfolioDb;
 MongoClient.connect(url, function(err, client) {
@@ -26,6 +27,23 @@ const postSignupInfoToDb = async (params) => {
     })
 }
 
+const login = async (params) => {
+    await portfolioDb.collection(params.collection)
+    .findOne({user: params.req.body.username}, (err, results) => {
+        if (results === null) {
+            params.res.send({success: false})
+        } else if (params.req.body.username === results.user && params.req.body.password === results.password){
+            params.res.cookie("sid", params.cookie)
+            params.res.send({
+                success: true,
+                results
+            })
+        } else {
+            params.res.send({success: false})
+        }
+    });
+}
+
 const putUserInDb = async (params) => {
     console.log(`
     user: ${params.req.body.username},
@@ -35,7 +53,8 @@ const putUserInDb = async (params) => {
     await portfolioDb.collection(params.collection)
     .insert({
         user: params.req.body.username,
-        sessionId: params.req.body.cookie,
+        password: params.req.body.password,
+        sessionId: params.cookie,
         email: params.req.body.email,
         portfolio: []
     })
@@ -45,5 +64,6 @@ const putUserInDb = async (params) => {
 
 module.exports = {
     getPortfolioFromDb,
-    postSignupInfoToDb
+    postSignupInfoToDb,
+    login
 }
